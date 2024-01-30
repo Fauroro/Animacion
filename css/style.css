@@ -4,6 +4,20 @@
     height: 726px;
     padding: 0;
 }
+
+#mensajes{
+    position: absolute;
+    background: url(/images/mensajes.png) no-repeat top center;
+    background-size: cover;
+    width: 409px;
+    height: 280px;
+    padding: 0;
+    right: 100%;
+    left: 320px;
+    top: 150px;
+    /* opacity: 0; */
+    animation: movMensaje 12s linear 2s;
+}
 #nube{
     position: relative;
     background: url(/images/nube.png) no-repeat top right;
@@ -15,7 +29,7 @@
     left: 800px;
     top: 10px;
     opacity: 0;
-    animation: movNube 8s linear 2s;
+    animation: movNube 12s linear 2s;
 }
 #sol{
     position: absolute;
@@ -29,6 +43,19 @@
     top: 20px;
     opacity: 0;
     animation: movSol 8s linear 9s forwards;
+}
+#lluvia{
+    position: relative;
+    background: url(/images/agua.png) no-repeat top center;
+    background-size: 150px;
+    width: 150px;
+    height: 50px;
+    padding: 0;
+    right: 100%;
+    left: 20px;
+    top: 100px;
+    /* opacity: 0; */
+    animation: movLluvia 8s linear 4s forwards;
 }
 
 @keyframes movNube{
@@ -53,5 +80,22 @@
     }
     100%{
         opacity: 1;
+    }
+}
+
+@keyframes movLluvia{
+    25%{
+        height: 700px; 
+
+    }
+    50%{
+        height: 500px; 
+    }
+    99%{
+        top: 600px;
+        height: 50px;
+    }
+    100%{
+        /* opacity: 0; */
     }
 }
