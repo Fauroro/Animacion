@@ -1,0 +1,57 @@
+#anim{
+    background: url(/images/fondo.png) no-repeat top left;
+    width: 1000px;
+    height: 726px;
+    padding: 0;
+}
+#nube{
+    position: relative;
+    background: url(/images/nube.png) no-repeat top right;
+    background-size: cover;
+    width: 192px;
+    height: 106px;
+    padding: 0;
+    right: 100%;
+    left: 800px;
+    top: 10px;
+    opacity: 0;
+    animation: movNube 8s linear 2s;
+}
+#sol{
+    position: absolute;
+    background: url(/images/sol.png) no-repeat top right;
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    padding: 0;
+    right: 100%;
+    left: 800px;
+    top: 20px;
+    opacity: 0;
+    animation: movSol 8s linear 9s forwards;
+}
+
+@keyframes movNube{
+    0% {
+        opacity: 1;
+    }
+    25%{
+        left: 404px;
+        opacity: 1;
+    }
+    75%{
+        left: 404px;
+        opacity: 1;
+    }
+    100%{
+        left:0;
+    }
+}
+@keyframes movSol{
+    20%{
+        opacity: 1;        
+    }
+    100%{
+        opacity: 1;
+    }
+}
