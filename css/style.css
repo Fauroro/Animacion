@@ -1,13 +1,14 @@
 div#anim{
-    background: url("/images/fondo.png") no-repeat top left;
+    background: url("../images/fondo.png") no-repeat top left;
     width: 1000px;
     height: 726px;
     padding: 0;
+    overflow: hidden;
 }
 
 div#mensajes{
     position: absolute;
-    background: url("/images/mensajes.png") no-repeat top center;
+    background: url("../images/mensajes.png") no-repeat top center;
     background-size: cover;
     background-position-y: 3%;
     width: 409px;
@@ -16,11 +17,11 @@ div#mensajes{
     right: 100%;
     left: 320px;
     top: 150px;
-    animation: movMensaje 8s linear 2s forwards;
+    animation: movMensaje 8s linear 3s forwards;
 }
 #nube{
     position: relative;
-    background: url("/images/nube.png") no-repeat top right;
+    background: url("../images/nube.png") no-repeat top right;
     background-size: cover;
     width: 256px;
     height: 141px;
@@ -29,11 +30,11 @@ div#mensajes{
     left: 720px;
     top: 10px;
     opacity: 0;
-    animation: movNube 30s linear 2s;
+    animation: movNube 20s linear 11s;
 }
 div#sol{
     position: absolute;
-    background: url("/images/sol.png") no-repeat top right;
+    background: url("../images/sol.png") no-repeat top right;
     background-size: cover;
     width: 150px;
     height: 150px;
@@ -46,7 +47,7 @@ div#sol{
 }
 div#lluvia{
     position: relative;
-    background: url("/images/agua.png") no-repeat bottom center;
+    background: url("../images/agua.png") no-repeat bottom center;
     background-size: 150px;
     width: 150px;
     height: 0px;
@@ -54,20 +55,19 @@ div#lluvia{
     right: 100%;
     left: 60px;
     top: 140px;
-    animation: movLluvia 10s linear 13s forwards;
+    animation: movLluvia 8s linear 17s forwards;
 }
 div#flor{
-    position: absolute;
-    background: url("/images/flor.png") no-repeat bottom right;
+    position: relative;
+    background: url("../images/flor.png") no-repeat bottom right;
     background-size: cover;
     width: 200px;
     height: 200px;
     padding: 0;
     right: 100%;
     left: 425px;
-    top: 546px;
-    opacity: 0;
-    animation: movFlor 12s linear 40s forwards;
+    top: 598px;
+    animation: movFlor 12s linear 34s forwards;
 }
 
 @keyframes movMensaje{
@@ -122,8 +122,11 @@ div#flor{
         left: 390px;
         opacity: 1;
     }
-    75%{
+    60%{
         left: 390px;
+        opacity: 1;
+    }
+    80%{
         opacity: 1;
     }
     100%{
@@ -134,6 +137,9 @@ div#flor{
     20%{
         opacity: 1;        
     }
+    40%{
+        opacity: 0.2;
+    }
     100%{
         opacity: 1;
     }
@@ -143,17 +149,17 @@ div#flor{
     0%{
         top: 140px;
     }
-    50%{
-        height: 560px; 
+    25%{
+        height: 760px; 
         top: 140px;
     }
-    60%{
-        height: 560px; 
+    50%{
+        height: 760px; 
         background-position: top;
     }
-    100%{
+    75%{
         background-position: top;
-        top: 660px;
+        top: 760px;
         height: 0px;
     }
 }
@@ -162,12 +168,13 @@ div#flor{
     0%{ 
         opacity: 1;
         transform: translateY(100%);
-        background-position-y: 100%;
+        /* background-position-y: 100%; */
         
     }
     100%{
+        top: 395px;
         background-position-y: 0%;
-        transform: translateY(0%);
+        /* transform: translateY(0%); */
 
     }
 }
