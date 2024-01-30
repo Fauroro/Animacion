@@ -29,7 +29,7 @@ div#mensajes{
     left: 720px;
     top: 10px;
     opacity: 0;
-    animation: movNube 50s linear 2s;
+    animation: movNube 30s linear 2s;
 }
 div#sol{
     position: absolute;
@@ -54,8 +54,7 @@ div#lluvia{
     right: 100%;
     left: 60px;
     top: 140px;
-    /* opacity: 0; */
-    animation: movLluvia 20s linear 10s forwards;
+    animation: movLluvia 10s linear 13s forwards;
 }
 div#flor{
     position: absolute;
@@ -66,8 +65,9 @@ div#flor{
     padding: 0;
     right: 100%;
     left: 425px;
-    top: 548px;
-    /* animation: movFlor 12s linear 2s forwards; */
+    top: 546px;
+    opacity: 0;
+    animation: movFlor 12s linear 40s forwards;
 }
 
 @keyframes movMensaje{
@@ -140,27 +140,27 @@ div#flor{
 }
 
 @keyframes movLluvia{
-    25%{
-        height: 0px; 
+    0%{
+        top: 140px;
     }
     50%{
         height: 560px; 
+        top: 140px;
     }
-    55%{
-        transform: translateY(0%);
-    }
-    75%{
-        transform: translateY(100%);
-        height: 0px;
-        
+    60%{
+        height: 560px; 
+        background-position: top;
     }
     100%{
-        /* opacity: 0; */
+        background-position: top;
+        top: 660px;
+        height: 0px;
     }
 }
 
 @keyframes movFlor{
     0%{ 
+        opacity: 1;
         transform: translateY(100%);
         background-position-y: 100%;
         
