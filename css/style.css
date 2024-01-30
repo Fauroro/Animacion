@@ -1,5 +1,5 @@
 div#anim{
-    background: url(/images/fondo.png) no-repeat top left;
+    background: url("/images/fondo.png") no-repeat top left;
     width: 1000px;
     height: 726px;
     padding: 0;
@@ -7,7 +7,7 @@ div#anim{
 
 div#mensajes{
     position: absolute;
-    background: url(/images/mensajes.png) no-repeat top center;
+    background: url("/images/mensajes.png") no-repeat top center;
     background-size: cover;
     background-position-y: 3%;
     width: 409px;
@@ -20,7 +20,7 @@ div#mensajes{
 }
 #nube{
     position: relative;
-    background: url(/images/nube.png) no-repeat top right;
+    background: url("/images/nube.png") no-repeat top right;
     background-size: cover;
     width: 256px;
     height: 141px;
@@ -33,7 +33,7 @@ div#mensajes{
 }
 div#sol{
     position: absolute;
-    background: url(/images/sol.png) no-repeat top right;
+    background: url("/images/sol.png") no-repeat top right;
     background-size: cover;
     width: 150px;
     height: 150px;
@@ -46,7 +46,7 @@ div#sol{
 }
 div#lluvia{
     position: relative;
-    background: url(/images/agua.png) no-repeat bottom center;
+    background: url("/images/agua.png") no-repeat bottom center;
     background-size: 150px;
     width: 150px;
     height: 0px;
@@ -59,7 +59,7 @@ div#lluvia{
 }
 div#flor{
     position: absolute;
-    background: url(/images/flor.png) no-repeat bottom right;
+    background: url("/images/flor.png") no-repeat bottom right;
     background-size: cover;
     width: 200px;
     height: 200px;
