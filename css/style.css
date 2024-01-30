@@ -1,37 +1,37 @@
-#anim{
+div#anim{
     background: url(/images/fondo.png) no-repeat top left;
     width: 1000px;
     height: 726px;
     padding: 0;
 }
 
-#mensajes{
+div#mensajes{
     position: absolute;
     background: url(/images/mensajes.png) no-repeat top center;
     background-size: cover;
+    background-position-y: 3%;
     width: 409px;
-    height: 280px;
+    height: 250px;
     padding: 0;
     right: 100%;
     left: 320px;
     top: 150px;
-    /* opacity: 0; */
-    animation: movMensaje 12s linear 2s;
+    animation: movMensaje 8s linear 2s forwards;
 }
 #nube{
     position: relative;
     background: url(/images/nube.png) no-repeat top right;
     background-size: cover;
-    width: 192px;
-    height: 106px;
+    width: 256px;
+    height: 141px;
     padding: 0;
     right: 100%;
-    left: 800px;
+    left: 720px;
     top: 10px;
     opacity: 0;
-    animation: movNube 12s linear 2s;
+    animation: movNube 50s linear 2s;
 }
-#sol{
+div#sol{
     position: absolute;
     background: url(/images/sol.png) no-repeat top right;
     background-size: cover;
@@ -42,32 +42,88 @@
     left: 800px;
     top: 20px;
     opacity: 0;
-    animation: movSol 8s linear 9s forwards;
+    animation: movSol 8s linear 32s forwards;
 }
-#lluvia{
+div#lluvia{
     position: relative;
-    background: url(/images/agua.png) no-repeat top center;
+    background: url(/images/agua.png) no-repeat bottom center;
     background-size: 150px;
     width: 150px;
-    height: 50px;
+    height: 0px;
     padding: 0;
     right: 100%;
-    left: 20px;
-    top: 100px;
+    left: 60px;
+    top: 140px;
     /* opacity: 0; */
-    animation: movLluvia 8s linear 4s forwards;
+    animation: movLluvia 20s linear 10s forwards;
+}
+div#flor{
+    position: absolute;
+    background: url(/images/flor.png) no-repeat bottom right;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    right: 100%;
+    left: 425px;
+    top: 548px;
+    /* animation: movFlor 12s linear 2s forwards; */
+}
+
+@keyframes movMensaje{
+    10%{
+        opacity: 0;
+        background-position-y: 3%;
+    }
+    20%{
+        opacity: 0;
+        background-position-y: 34.5%;
+    }
+    30%{
+        opacity: 1;
+        background-position-y: 34.5%;
+    }
+    40%{
+        opacity: 0;
+        background-position-y: 34.5%;
+    }
+    50%{
+        opacity: 0;
+        background-position-y: 68%;
+    }
+    60%{
+        opacity: 1;
+        background-position-y: 68%;
+    }
+    70%{
+        opacity: 0;
+        background-position-y: 68%;
+    }
+    80%{
+        opacity: 0;
+        background-position-y: 100%;
+    }
+    90%{
+        opacity: 1;
+        background-position-y: 100%;
+    }
+    100%{
+        opacity: 0;
+        background-position-y: 100%;
+    }
 }
 
 @keyframes movNube{
-    0% {
+    10% {
         opacity: 1;
+        left: 720px;
     }
     25%{
-        left: 404px;
+        left: 390px;
         opacity: 1;
     }
     75%{
-        left: 404px;
+        left: 390px;
         opacity: 1;
     }
     100%{
@@ -85,17 +141,33 @@
 
 @keyframes movLluvia{
     25%{
-        height: 700px; 
-
+        height: 0px; 
     }
     50%{
-        height: 500px; 
+        height: 560px; 
     }
-    99%{
-        top: 600px;
-        height: 50px;
+    55%{
+        transform: translateY(0%);
+    }
+    75%{
+        transform: translateY(100%);
+        height: 0px;
+        
     }
     100%{
         /* opacity: 0; */
+    }
+}
+
+@keyframes movFlor{
+    0%{ 
+        transform: translateY(100%);
+        background-position-y: 100%;
+        
+    }
+    100%{
+        background-position-y: 0%;
+        transform: translateY(0%);
+
     }
 }
